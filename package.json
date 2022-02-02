@@ -1,7 +1,7 @@
 {
-  "name": "obsidian-csv-table",
+  "name": "ad-table-query",
   "version": "1.2.0",
-  "description": "Render CSV data as a table within your notes.",
+  "description": "Query a csv file or a markdown table and render results as a table.",
   "main": "main.js",
   "scripts": {
     "dev": "rollup --config rollup.config.js -w",
@@ -16,7 +16,7 @@
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^11.2.1",
     "@rollup/plugin-typescript": "^8.2.1",
-    "@types/jest": "^26.0.23",
+    "@types/jest": "^26.0.24",
     "@types/node": "^14.14.37",
     "jest": "^27.0.1",
     "obsidian": "^0.12.0",
@@ -27,7 +27,8 @@
     "typescript": "^4.2.4"
   },
   "dependencies": {
-    "csv-parse": "^4.15.4",
-    "filtrex": "^2.1.0"
+    "csv": "^6.0.5",
+    "csv-parse": "^4.16.3",
+    "filtrex": "^2.2.3"
   }
 }
