@@ -1,4 +1,58 @@
-## Obsidian CSV Table
+## Obsidian CSV Table Fork
+
+I really like the obsidian-csv-table plugin and have added another option for my purposes where the **source** option can also include any markdown tables in any markdown files in the vault.
+
+I do the following
+- the **source** option can refer to any markdown file in the vault eg. _**My Table Data.md**_
+- the keyword **tableheading** defines which table to use in the source markdown file
+    - Each column name of the markdown table is listed separated by commas eg. **_Product Name,Product No,Qty_**
+    - Note **All** column names must be listed
+- all other options work as expected eg filter, sortBy, columns etc.
+- rather than use the code block identifier **csvtable** I have used **ad-table-query**. 
+    - In this way you can use this forked version of the plugin in parallel with the original obsidian-csv-table.
+
+## Example
+
+### The table in page Tests/test-ad-table-query
+
+|Product|No|Description|
+|---|---|---|
+|Pear|203|Similar to Apple but not round|
+|Apple|100|Round fruit with pips|
+|Orange||Also round|
+|Grapes|10050|Has pips be careful|
+|Lime|7081|Simlar to a lemon but green|
+|Avocado|9034|Nice in Sandwiches|
+
+<pre>```ad-table-query
+source: Tests/test-ad-table-query.md
+tableheading: "Product,No,Description"
+columns:
+- Product
+- No
+- Description
+sortBy: Description
+filter: No != ""
+```
+</pre>
+
+will render the following table
+
+|Product|No|Description|
+|---|---|---|
+|Grapes|10050|Has pips be careful|
+|Avocado|9034|Nice in Sandwiches|
+|Apple|100|Round fruit with pips|
+|Pear|203|Similar to Apple but not round|
+|Lime|7081|Simlar to a lemon but green
+
+
+
+## Method used by this fork
+- Markdown tables are automatically converted to csv internally and then passed through to the original csv handling of obsidian-csv-table plugin.
+- tables that are created and updated by the **Advanced Tables** plugin are supported as the conversion to csv strips leading and trailing spaces from table cells
+
+# Original obsidian-csv-table README
 
 Have data in a CSV file that you'd like to render as a table in Obsidian? Now you can.
 
