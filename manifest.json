@@ -1,9 +1,9 @@
 {
-	"id": "obsidian-csv-table",
-	"name": "CSV Table",
+	"id": "ad-table-query",
+	"name": "AD Table Query",
 	"version": "1.2.0",
 	"minAppVersion": "0.11.10",
-	"description": "Render CSV data as a table within your notes.",
+	"description": "Query a csv file or a markdown table and render results as a table",
 	"author": "Adam Coddington <me@adamcoddington.net>",
 	"authorUrl": "https://coddingtonbear.net/",
 	"isDesktopOnly": false
