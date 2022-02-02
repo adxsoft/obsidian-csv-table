@@ -17,6 +17,7 @@ export interface ExtendedSortExpression {
 
 export interface CsvTableSpec {
   source: string
+  tableheading?: string
   csvOptions?: Options
   columns?: (NamedColumn | string)[]
   columnVariables?: Record<string, string>
