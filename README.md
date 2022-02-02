@@ -9,7 +9,7 @@ I do the following
     - Note **All** column names must be listed
 - all other options work as expected eg filter, sortBy, columns etc.
 - rather than use the code block identifier **csvtable** I have used **ad-table-query**. 
-    - In this way you can use this forked version of the plugin in parallel with the original obsidian-csv-table.
+    - In this way you can use this forked version of the plugin in parallel with the original obsidian-csv-table plugin.
 
 ## Example
 
